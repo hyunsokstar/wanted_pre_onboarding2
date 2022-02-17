@@ -1,0 +1,58 @@
+/* 스위치를 부모 태그로 설정 */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  
+    /* background-color: red; */
+  }
+  
+  /* 인풋 안보이게 하고 넓이 높이 0으로 */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* span을 자식 태그로 하고 위치는 0 0 0 0  배경은 회색*/
+  .slider {
+    position: absolute;
+    cursor: pointer;
+  
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  
+    background-color: #ccc;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+  }
+  
+  
+  input:checked + .slider {
+    background-color: #2196f3;
+  }
+  
+  input:checked + .slider:before{
+      transform: translate(26px);
+  }
+  
+  .slider.rounded {
+    border-radius: 34px;
+  }
+  
+  .slider.rounded:before {
+    border-radius: 50%;
+  }
