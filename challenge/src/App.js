@@ -7,6 +7,7 @@ import MainPamge from "./pages/MainPage";
 import TabsPage from "./pages/TabsPage";
 import TagsInputPage from "./pages/TagsInputPage";
 import AutoCompleteSearchPage from "./pages/AutoCompleteSearchPage";
+import ClickToEditPage from "./pages/ClickToEditPage";
 
 
 function App() {
@@ -33,6 +34,11 @@ function App() {
       &nbsp;&nbsp;
       <Link to="/auto-search">
         <span>auto-search</span>
+      </Link>     
+       
+      &nbsp;&nbsp;
+      <Link to="/clickToEdit">
+        <span>ClickToEdit</span>
       </Link>      
 
       <br />
@@ -43,6 +49,7 @@ function App() {
         <Route path="/tabs" exact element={<TabsPage />} />
         <Route path="/search" exact element={<TagsInputPage />} />
         <Route path="/auto-search" exact element={<AutoCompleteSearchPage />} />
+        <Route path="/clickToEdit" exact element={<ClickToEditPage />} />
         <Route path="/" element={<MainPamge />} />
       </Routes>
     </>
